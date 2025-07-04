@@ -1,35 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="icon" href="new-swc.png" type="image/png" />
-  <title>Stenoip Wonder Computer</title>
+  <title>Stenoip Wunder-Computer</title>
 
   <style>
-       /* General Styles */
+       /* Allgemeine Stile */
 body {
     font-family: 'Google Sans', sans-serif;
     background-color: #f0f0f0;
     margin: 0;
-    overflow-x: hidden; /* Prevent horizontal scroll only */
-
-
+    overflow-x: hidden;
 }
 
-/* Fullscreen video styling */
+/* Vollbild-Video-Stil */
 .intro-video {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure video scales properly */
+    object-fit: cover;
     z-index: 10;
 }
 
-/* Green Screen for launch */
+/* Grüner Startbildschirm */
 .launch-screen {
     position: fixed;
     top: 0;
@@ -46,18 +44,18 @@ body {
     z-index: 15;
 }
 
-/* Hide content initially */
+/* Inhalt zuerst ausblenden */
 #main-content {
     display: none;
 }
 
-/* Header styles */
+/* Kopfzeilen-Stil */
 .header {
     font-size: 13px;
     text-align: right;
     padding: 22px 10px;
     background-color: rgba(240, 191, 111, 255);
-    width: 100%; /* Ensure header is full width */
+    width: 100%;
     box-sizing: border-box;
 }
 
@@ -76,7 +74,7 @@ body {
     text-decoration: underline;
 }
 
-/* Dropdown styling */
+/* Dropdown-Stil */
 .menu {
     position: relative;
     display: inline-block;
@@ -122,7 +120,6 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
     border-radius: 10px;
-   
 }
 
 
@@ -130,7 +127,7 @@ body {
     font-size: 14px;
     padding: 12px 20px;
     width: 90%;
-    max-width: 600px; /* Limit width for larger screens */
+    max-width: 600px;
     color: rgb(51, 51, 51);
     border: 1px solid rgb(223, 225, 229);
     border-radius: 24px;
@@ -164,7 +161,7 @@ body {
     background-color: rgb(241, 243, 244);
 }
 
-/* Button styles */
+/* Button-Stil */
 .btns {
     margin: 7px 0;
     padding: 20px 40px;
@@ -180,7 +177,7 @@ body {
     background-color: rgb(241, 243, 244);
 }
 
-/* Learn Centre Button (larger and center-aligned) */
+/* Lernzentrum-Schaltfläche */
 .learn-centre-btn {
     margin: 20px 0;
     padding: 20px 50px;
@@ -196,7 +193,7 @@ body {
     background-color: rgb(57, 103, 204);
 }
 
-/* Skip button styles */
+/* Überspringen-Button */
 .skip-btn {
     position: fixed;
     bottom: 20px;
@@ -215,40 +212,33 @@ body {
     background-color: rgb(57, 103, 204);
 }
 
-/* Media queries for responsiveness */
+/* Media Queries für Responsivität */
 @media (max-width: 768px) {
     .header {
         font-size: 12px;
         padding: 10px;
     }
-
     .search {
         width: 90%;
         font-size: 16px;
     }
-
     .container {
         padding: 80px 10px;
     }
-
     .learn-centre-btn {
         padding: 18px 40px;
         font-size: 18px;
     }
-
     .skip-btn {
         bottom: 10px;
         left: 10px;
         padding: 8px 15px;
         font-size: 14px;
     }
-
     .footer {
         font-size: 10px;
         padding: 15px;
     }
-
-    /* Remove any unwanted overflow */
     body, html {
         width: 100%;
         height: 100%;
@@ -256,12 +246,10 @@ body {
     }
 }
 
-/* Landscape and other larger screens adjustments */
 @media (max-width: 1024px) and (min-width: 769px) {
     .search {
         width: 70%;
     }
-
     .learn-centre-btn {
         padding: 20px 45px;
         font-size: 20px;
@@ -389,53 +377,49 @@ body {
 </head>
 <body>
 
-  <!-- Launch screen -->
+  <!-- Startbildschirm -->
   <div class="launch-screen" id="launch-screen" onclick="startVideo()">
-    Click to Launch
+    Zum Starten klicken
   </div>
 
-  <!-- Intro video -->
+  <!-- Intro-Video -->
 <video id="intro-video" class="intro-video" autoplay playsinline muted style="display: none;">
   <source src="https://stenoip.github.io/intro_short.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
+  Ihr Browser unterstützt das Video-Tag nicht.
 </video>
 
-  <!-- Skip button -->
-  <button class="skip-btn" id="skip-btn" onclick="skipVideo()">Skip Intro</button>
+  <!-- Überspringen-Button -->
+  <button class="skip-btn" id="skip-btn" onclick="skipVideo()">Intro überspringen</button>
 
-  <!-- Main content container (previously missing) -->
+  <!-- Hauptinhalt -->
   <div id="main-content" style="display: none;">
-    
-    
-    
       <div class="header">
-        <h1>Stenoip Wonder Computer</h1>
+        <h1>Stenoip Wunder-Computer</h1>
       </div>
       <div class="search-bar">
-        <input type="text" id="search-input" oninput="showSuggestions()" placeholder="Search..." />
-        
-        <button onclick="search()">Search</button>
+        <input type="text" id="search-input" oninput="showSuggestions()" placeholder="Suchen..." />
+        <button onclick="search()">Suchen</button>
         <div class="suggestions" id="suggestions" style="display: none;"></div>
       </div>
 <script async src="https://cse.google.com/cse.js?cx=63de7b7e7f71042d6"></script>
         <div class="gcse-search"></div>
       <button class="learn-centre-btn" onclick="window.location.href='https://stenoip.github.io/learn-centre';">
-        Learn Centre
+        Lernzentrum
       </button>
 
       <div class="footer">
-        <p>Version 0.64 &copy; Stenoip Company</p>
+        <p>Version 0.64 &copy; Stenoip Unternehmen</p>
       </div>
-<p>Download Ringzauber here. It is a safe download since <br>it comes from the offical Stenoip Company website.<br><a href="https://stenoip.github.io/download">Go Here.</a> </p>
+      <p>Lade Ringzauber hier herunter. Es ist ein sicherer Download, da <br>es von der offiziellen Stenoip-Unternehmenswebsite stammt.<br><a href="https://stenoip.github.io/download">Hier klicken.</a> </p>
       <div class="tomorrow" data-location-id="122795,052149,064500,050388,072102,015101"
-        data-language="EN" data-unit-system="METRIC" data-skin="light" data-widget-type="aqi6"
+        data-language="DE" data-unit-system="METRIC" data-skin="light" data-widget-type="aqi6"
         style="padding-bottom:22px;position:relative;">
         <a href="https://www.tomorrow.io/weather-api/" target="_blank" style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;">
           <img src="https://weather-website-client.tomorrow.io/img/powered-by.svg" width="250" height="18" alt="Powered by Tomorrow.io">
         </a>
       </div>
 
-      <div class="tomorrow" data-location-id="122795" data-language="EN" data-unit-system="METRIC"
+      <div class="tomorrow" data-location-id="122795" data-language="DE" data-unit-system="METRIC"
         data-skin="light" data-widget-type="upcoming" style="padding-bottom:22px;position:relative;">
         <a href="https://www.tomorrow.io/weather-api/" target="_blank" style="position: absolute; bottom: 0; transform: translateX(-50%); left: 50%;">
           <img src="https://weather-website-client.tomorrow.io/img/powered-by.svg" width="250" height="18" alt="Powered by Tomorrow.io">
@@ -443,28 +427,28 @@ body {
       </div>
     </div>
 
-  <!-- Scripts -->
+  <!-- Scripte -->
   <script>
-    // Links used for search suggestions
+    // Links für Suchvorschläge
     const links = [
       { name: '2048', url: '2048.html' },
-      { name: 'Anniversary', url: 'anniversary.html' },
-      { name: 'Boublok Coding', url: 'boublok.html' },
+      { name: 'Jahrestag', url: 'anniversary.html' },
+      { name: 'Boublok Programmierung', url: 'boublok.html' },
       { name: 'TI 30XS', url: 'calculator_ti30xiis.html' },
       { name: 'TI 84', url: 'calculator_ti84.html' },
-      { name: 'Camera', url: 'camera.html' },
-      { name: 'Clocker', url: 'clocker.html' },
+      { name: 'Kamera', url: 'camera.html' },
+      { name: 'Uhr', url: 'clocker.html' },
       { name: 'Comics!', url: 'comic.html' },
-      { name: 'The Data Store(Datenspeicher)', url: 'download.html' },
+      { name: 'Der Datenspeicher', url: 'download.html' },
       { name: 'MailSteno(WIP)', url: 'email.html' },
       { name: 'Flappy Bird', url: 'flappybird.html' },
-      { name: 'StenoipToanielstik(Games)', url: 'game.html' },
-      { name: 'Gravity Simulation', url: 'gravity.html' },
+      { name: 'StenoipToanielstik(Spiele)', url: 'game.html' },
+      { name: 'Gravitationssimulation', url: 'gravity.html' },
       { name: 'StenoVids', url: 'video.html' },
       { name: 'Tetris', url: 'tetris.html' }
     ];
 
-    // Search navigation
+    // Suche
     function search() {
       const query = document.getElementById('search-input').value;
       const matchedLink = links.find(link => link.name.toLowerCase().includes(query.toLowerCase()));
@@ -473,7 +457,7 @@ body {
       }
     }
 
-    // Search suggestions
+    // Suchvorschläge
     function showSuggestions() {
       const query = document.getElementById('search-input').value.toLowerCase();
       const suggestionsContainer = document.getElementById('suggestions');
@@ -491,7 +475,7 @@ body {
       suggestionsContainer.style.display = filteredLinks.length ? 'block' : 'none';
     }
 
-    // Start video
+    // Video starten
     function startVideo() {
       const video = document.getElementById('intro-video');
       video.muted = false;
@@ -499,28 +483,27 @@ body {
       video.style.display = 'block';
     }
 
-    // Skip video
-   function skipVideo() {
-    const video = document.getElementById('intro-video');
-    video.pause();
-    video.currentTime = 0;
-    video.style.display = 'none';
-    document.getElementById('main-content').style.display = 'block';
-    document.getElementById('launch-screen').style.display = 'none';
-    document.getElementById('skip-btn').style.display = 'none';
-    document.body.style.overflow = 'auto'; // ✅ enable scrolling
-}
+    // Video überspringen
+    function skipVideo() {
+      const video = document.getElementById('intro-video');
+      video.pause();
+      video.currentTime = 0;
+      video.style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+      document.getElementById('launch-screen').style.display = 'none';
+      document.getElementById('skip-btn').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
 
-document.getElementById('intro-video').addEventListener('ended', function () {
-    document.getElementById('intro-video').style.display = 'none';
-    document.getElementById('main-content').style.display = 'block';
-    document.getElementById('launch-screen').style.display = 'none';
-    document.getElementById('skip-btn').style.display = 'none';
-    document.body.style.overflow = 'auto'; // ✅ enable scrolling
-});
+    document.getElementById('intro-video').addEventListener('ended', function () {
+      document.getElementById('intro-video').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+      document.getElementById('launch-screen').style.display = 'none';
+      document.getElementById('skip-btn').style.display = 'none';
+      document.body.style.overflow = 'auto';
+    });
 
-
-    // Load Tomorrow.io widget
+    // Tomorrow.io Widget laden
     (function (d, s, id) {
       if (d.getElementById(id)) {
         if (window.__TOMORROW__) {
